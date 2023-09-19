@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pase de batalla - Valorant</title>
+  <link rel="icon" type="image/png" href="iniciodepagina.gif">
+  <style>
+    body {
+      /* Configura la imagen de fondo */
+      background-image: url('pasedebatalla.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: sticky; /* Hace que el encabezado sea pegajoso */
+      top: 0;
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+      height: 70px;
+      z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
+    }
+
+    /* Estilos para el logo */
+    #logo {
+      width: 100px;
+    }
+
+    #logo img {
+      width: 100%;
+    }
+
+    /* Estilos para la navegación */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      flex: 1;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+    }
+
+    nav ul li a:hover::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 10px);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Estilos para el menú desplegable */
+    .menu {
+      display: none;
+      position: absolute;
+      background-color: #b0bec5;
+      border-radius: 5px;
+      padding: 10px;
+      top: 60px;
+      left: 0;
+      z-index: 1;
+    }
+
+    nav ul li:hover .menu {
+      display: block;
+    }
+
+    /* Estilos para el botón de inicio de sesión */
+    #login {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-left: 20px;
+    }
+
+    #login img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Estilos para el contenedor de búsqueda */
+    #search-container {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    #search-input {
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 200px;
+    }
+
+    #search-button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Estilos para el texto dentro del fondo */
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* Estilos para el pie de página */
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <a href="index.html">
+        <img src="logo.jpeg" alt="Riot Games">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="noticias.html">NOTICIAS</a>
+        </li>
+        <li>
+          <a href="info_juego.html">INFO DEL JUEGO</a>
+        </li>
+        <li>
+          <a href="pase_batalla.html">PASE DE BATALLA</a>
+        </li>
+        <li>
+          <a href="comunidad.html">COMUNIDAD</a>
+        </li>
+       
+      </ul>
+    </nav>
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="Buscar...">
+      <button id="search-button">Buscar</button>
+    </div>
+    <div id="login">
+      <img src="icono de inicio de sesion.png" alt="Icono de Iniciar Sesión">
+      <!-- Texto o enlace para iniciar sesión -->
+    </div>
+  </header>
+
+  <!-- Contenido principal (noticias) -->
+  <div id="contenido-noticias">
+    <a href="#" class="overlay-text" id="overlay-text">NUEVAS SKINS Y ACCESORIOS<br>PRÓXIMAMENTE</a>
+  </div>
+
+ <!-- Footer -->
+ <footer>
+  <div id="footer-content">
+    © 2023 Todos los derechos reservados - Contacto: dennisaurio2000@gmail.com
+  </div>
+</footer>
+
+  <!-- Tu código JavaScript para controlar las transiciones aquí -->
+  <script>
+    const contenidoNoticias = document.getElementById("contenido-noticias");
+
+    contenidoNoticias.addEventListener("click", function () {
+      // Cambia el fondo al hacer clic
+      document.body.style.backgroundImage = "url('fondodepasebatalla.png')";
+
+      // Oculta el texto
+      const overlayText = document.getElementById("overlay-text");
+      overlayText.style.display = "none";
+    });
+  </script>
+</body>
+</html>
+</body>
+</html>
